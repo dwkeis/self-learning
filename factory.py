@@ -6,25 +6,35 @@ class Arsenal(footballteam):
 	def __init__(self,teamname):
 		self.__name = teamname
 	def team(self):
-		print ("Ozil plays at " + self.__name)
+		print ("Arsenal plays at " + self.__name)
 
-class player:
+class Barcelona(footballteam):
+	def __init__(self,teamname):
+		self.__name = teamname
+	def team(self):
+		print ("Barca plays at " + self.__name)
+
+class nations:
 	def playat(self):
 		pass
 
-class ozil(player):
+class england(nations):
 	def playat(self):
-		return Arsenal("Arsenal")
+		return Arsenal("England")
+
+class spain(nations):
+	def playat(self):
+		return Barcelona("Spain")
 
 if __name__ == "__main__" : 
-	player = ozil()
-	club = player.playat()
+	nations = england()
+	club = nations.playat()
+	club.team()
+	nations = spain()
+	club = nations.playat()
 	club.team()
 
 
 
 
 
-class Barcelona(footballteam):
-	def team(self,teamname):
-		print ("Team Barca")
