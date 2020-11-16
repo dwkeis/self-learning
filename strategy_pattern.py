@@ -35,10 +35,10 @@ class Duck():
         self.call_way.quack()
 
 if __name__ == '__main__':
-    fly_gua_duck = Duck(FlyWithWings(), AhAh())  
+    fly_gua_duck = Duck(FlyWithWings(), AhAh())
     fly_gua_duck.fly()
     fly_gua_duck.quack()
 
-    no_fly_wa_duck = Duck(NoFly(), WaWa())  
+    no_fly_wa_duck = Duck(NoFly(), WaWa())
     no_fly_wa_duck.fly()
     no_fly_wa_duck.quack()
