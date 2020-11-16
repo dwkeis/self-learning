@@ -20,7 +20,7 @@ class Default(Fries):
 
 class Factory:
     """where to make fries"""
-    def product_fries(self, flavor):
+    def produce_fries(self, flavor):
         if flavor == 'nosalt':
             return NoSalt("no salt")
         if flavor == 'original':
@@ -28,5 +28,5 @@ class Factory:
 
 if __name__ == '__main__':
     factory = Factory()
-    factory.product_fries('nosalt').describe()
-    factory.product_fries('original').describe()
+    factory.produce_fries('nosalt').describe()
+    factory.produce_fries('original').describe()
