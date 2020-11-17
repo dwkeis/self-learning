@@ -1,11 +1,10 @@
 class Drink:
-    def __init__(self):
-        pass
-
-    def flavor(sugar_num=0,ice_num=0):
+    def sugar(sugar_num=0):
         sugar = ["REGULAR","LESS","HALF","QUARTER","FREE"]
+        print("sugar of your drink %s"%(sugar[sugar_num]))
+    def ice(ice_num=0):
         ice = ["REGULAR","EASY","FREE","HOT"]
-        print("sugar of your drink %s, and ice of your drink %s "%(sugar[sugar_num],ice[ice_num]))
+        print("ice of your drink %s "%(ice[ice_num]))
 
 
 class Tea(Drink):
@@ -15,18 +14,29 @@ class Tea(Drink):
 
 class Coffee(Drink):
     def Type(self,coffee_num=0):
-        coffee = ["LATTE","MOCHA","WHITE","BLUE_MOUNTAIN","AMERICANO","ESPRESSO"]
+        coffee = ["LATTE","MOCHA","FLAT_WHITE","BLUE_MOUNTAIN","AMERICANO","ESPRESSO"]
         print("Drinks you order : %s"%(coffee[coffee_num]))
 
-class Factory:
-    def choose(self,product):
-        if product == 'tea':
-            return Tea()
-        if product == 'coffee':
-            return Coffee()
+class Order:
+    def __init__(self,product,flavor,sugar,ice):
+        self.product = product
+        self.flavor = flavor
+        self.sugar = sugar
+        self.ice = ice
+    def choice(self):
+        self.product.Type(self.flavor)
+        Drink.sugar(self.sugar)
+        Drink.ice(self.ice)
 
-factory = Factory()
-factory.choose('tea').Type(1)
-Drink.flavor(2,1)
+order = Order(Tea(),1,1,2)
+order.choice()
+
+order = Order(Coffee(),2,0,1)
+order.choice()
+
+
+
+
+
 
 
