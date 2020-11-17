@@ -28,15 +28,10 @@ class Order:
         Drink.sugar(self.sugar)
         Drink.ice(self.ice)
 
-order = Order(Tea(),1,1,2)
+order = Tea()
+order = Order(order,1,1,2)
 order.choice()
 
-order = Order(Coffee(),2,0,1)
+order = Coffee()
+order = Order(order,2,0,1)
 order.choice()
-
-
-
-
-
-
-
