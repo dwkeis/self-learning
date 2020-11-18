@@ -42,3 +42,4 @@ if __name__ == '__main__':
     no_fly_wa_duck = Duck(NoFly(), WaWa())
     no_fly_wa_duck.fly()
     no_fly_wa_duck.quack()
+
