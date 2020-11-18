@@ -26,39 +26,38 @@ class Price:
     def calculate(self):
         list1 = []
         list1.append(self.discount_type.calculate(self.value,self.discount))
-        
-
-class Checkout(Price):
-    def calculate(self):
-        super().calculate()
+        print(list1)
+    def checkout(self):
         print(sum(list1))
 
 
 class Drink:
-    def describe(self):
+    def price(self):
         pass
 
 class Milk(Drink):
-    def __init__(self,price=0):
+    def output(self,price):
         self.price = price
-    def dd(self):
-        print(self.price)
+        print("Milk : %s"%(self.price))
 
 class Coffee(Drink):
-    def __init__(self,price):
+    def output(self,price):
         self.price = price
-    def price(self):
-        print("milk : %s"%(self.price))
+        print("Coffee : %s"%(self.price))
 
 if __name__ == '__main__':
     product = MinusDiscount()
-    product = Price(product,10,3)
-    product.calculate()
+    product = Price(product,10,3).calculate()
+
+    product = MultiplyDiscount()
+    product = Price(product,10,0.4).calculate()
+
+    new = Milk()
+    new.output(20)
 
 
-    product = NoDiscount()
-    product = Price(product,10,100)
-    product.calculate()
+
+
 
 
 

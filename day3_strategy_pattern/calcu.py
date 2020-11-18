@@ -34,4 +34,4 @@ if __name__ == '__main__':
 	factory = factory()
 	factory.method('*').cal(2,3)
 	factory.method('-').cal(2,3)
-
+	plus().cal(2,3)
