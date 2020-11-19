@@ -1,4 +1,6 @@
+# to calculate the fee of different transport
 class Bus():
+    # to cal bus' fee
     def distance(self,km):
         count = 0
         if km <=10:
@@ -10,6 +12,7 @@ class Bus():
         print ("you are taking Bus, Fee is : " + str(count))
 
 class MRT():
+    # to cal MRT fee
     def distance(self,km):
         result = 0
         if km <=20:
@@ -20,6 +23,7 @@ class MRT():
         print ("you are taking MRT, Fee is : " + str(result))
 
 class Factory:
+    # define what transport you choose
     def travel(self,which):
         if which == 'Bus':
             return Bus()
