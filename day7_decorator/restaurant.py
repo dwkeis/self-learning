@@ -35,8 +35,6 @@ class Jumbo():
 
 
 aa = Order()
-
-
 aa.salad()
 aa.main()
 Jumbo().check()
